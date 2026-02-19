@@ -2,68 +2,172 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ANAS BARBER</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ANAS BARBER</title>
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+  <style>
+    :root{
+      --gold:#d4af37;
+      --gold2:#f1c40f;
+      --card: rgba(0,0,0,.62);
+      --stroke: rgba(212,175,55,.25);
+      --shadow: 0 25px 80px rgba(0,0,0,.65);
+    }
 
-    background: url("bg.jpg") center/cover no-repeat fixed;
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#fff;
+      padding:24px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    color: white;
-}
+      /* ✅ خلفية صورة + تغميق */
+      background:
+        linear-gradient(135deg, rgba(0,0,0,.78), rgba(0,0,0,.70)),
+        url("https://images.unsplash.com/photo-1520975958225-0c3c4b5f6c91?auto=format&fit=crop&w=1400&q=60");
+      background-size:cover;
+      background-position:center;
+      background-attachment:fixed;
+    }
 
-.container {
-    width: 90%;
-    max-width: 420px;
-    background: rgba(0,0,0,0.8);
-    padding: 35px 20px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
-}
+    .wrap{width:100%; max-width:460px;}
+    .card{
+      background: var(--card);
+      border:1px solid var(--stroke);
+      border-radius:22px;
+      padding:28px 18px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(8px);
+      text-align:center;
+    }
 
-h1 {
-    color: #d4af37;
-    margin-bottom: 25px;
-    font-size: 30px;
-}
+    .brand{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      align-items:center;
+      margin-bottom:18px;
+    }
 
-a {
-    display: block;
-    margin: 15px 0;
-    padding: 16px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: bold;
-    background: #d4af37;
-    color: black;
-    transition: 0.2s;
-}
+    .logo{
+      width:84px; height:84px;
+      border-radius:22px;
+      background: linear-gradient(145deg, rgba(212,175,55,.25), rgba(255,255,255,.06));
+      border:1px solid rgba(212,175,55,.35);
+      display:flex; align-items:center; justify-content:center;
+      font-weight:900; color:var(--gold);
+      letter-spacing:1px;
+      box-shadow: 0 12px 35px rgba(0,0,0,.35);
+      user-select:none;
+    }
 
-a:hover {
-    transform: scale(1.05);
-    background: #f1c40f;
-}
-</style>
+    h1{margin:0; font-size:30px; color: var(--gold);}
+    .sub{margin:0; font-size:13px; opacity:.85; line-height:1.6;}
+
+    .btn{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin:12px 0;
+      padding:15px 14px;
+      border-radius:16px;
+      text-decoration:none;
+      font-weight:800;
+      background: linear-gradient(180deg, var(--gold), #caa331);
+      color:#101010;
+      transition:.18s;
+      border:1px solid rgba(255,255,255,.15);
+    }
+    .btn:hover{ transform: scale(1.03); background: linear-gradient(180deg, var(--gold2), var(--gold)); }
+
+    .btn.secondary{
+      background: rgba(255,255,255,.06);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.14);
+    }
+    .btn.secondary:hover{ background: rgba(255,255,255,.10); }
+
+    .section{
+      margin-top:18px;
+      text-align:right;
+      padding:14px 14px 10px;
+      border-radius:16px;
+      background: rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.10);
+    }
+    .section h2{
+      margin:0 0 10px;
+      font-size:16px;
+      color: var(--gold);
+    }
+
+    .note{
+      font-size:12px;
+      opacity:.8;
+      margin:8px 0 0;
+      line-height:1.5;
+    }
+
+    .footer{
+      margin-top:12px;
+      font-size:12px;
+      opacity:.75;
+      text-align:center;
+    }
+
+    @media (max-width:420px){
+      h1{font-size:26px}
+    }
+  </style>
 </head>
 
 <body>
+  <div class="wrap">
+    <div class="card">
 
-<div class="container">
-    <h1>أنس الحلاق</h1>
+      <div class="brand">
+        <div class="logo">AB</div>
+        <h1>أنس الحلاق</h1>
+        <p class="sub">حجز • استفسار • موقعنا على الخريطة</p>
+      </div>
 
-    <a href="https://www.tiktok.com/@anas.elarbesh?_r=1&_t=ZS-941n4K0KPga" target="_blank">تيك توك</a>
-    <a href="https://www.facebook.com/share/17zSRHQ5Av/" target="_blank">فيسبوك</a>
-    <a href="https://www.snapchat.com/add/elarbesh?share_id=AY1oNobrRqY&locale=en-US" target="_blank">سناب شات</a>
-</div>
+      <!-- ✅ الروابط القديمة -->
+      <a class="btn" href="https://www.tiktok.com/@anas.elarbesh?_r=1&_t=ZS-941n4K0KPga" target="_blank" rel="noopener">تيك توك</a>
+      <a class="btn" href="https://www.facebook.com/share/17zSRHQ5Av/" target="_blank" rel="noopener">فيسبوك</a>
+      <a class="btn" href="https://www.snapchat.com/add/elarbesh?share_id=AY1oNobrRqY&locale=en-US" target="_blank" rel="noopener">سناب شات</a>
+      <!-- ✅ الجديد: زر واتساب على رقمك -->
+      <!-- رقمك بصيغة دولية بدون + ولا مسافات: 218927848186 -->
+      <a class="btn secondary"
+         href="https://wa.me/218927848186?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%20%D8%A3%D8%A8%D8%BA%D9%89%20%D8%AD%D8%AC%D8%B2%20%D8%B9%D9%86%D8%AF%D9%83"
+         target="_blank" rel="noopener">
+        واتساب (حجز سريع)
+      </a>
 
+      <!-- ✅ الجديد: موقع المحل -->
+      <div class="section">
+        <h2>موقعنا على الخريطة</h2>
+
+        <!-- زر يفتح الخريطة (شغال 100%) -->
+        <a class="btn" style="margin:0 0 10px"
+           href="https://maps.app.goo.gl/sXW8zwb1NHRLix8M7"
+           target="_blank" rel="noopener">
+          فتح الموقع في خرائط Google
+        </a>
+
+        <p class="note">
+          ملاحظة: عرض الخريطة داخل الصفحة يحتاج رابط <b>تضمين خريطة (Embed)</b> من Google Maps.
+          إذا تبي أركّبها داخل الصفحة، أرسل لي رابط الـ Embed أو صورة من خيار “تضمين خريطة”.
+        </p>
+      </div>
+
+      <div class="footer">© ANAS BARBER</div>
+    </div>
+  </div>
 </body>
 </html>
